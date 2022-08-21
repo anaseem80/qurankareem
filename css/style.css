@@ -1,0 +1,467 @@
+:root{
+    --light-color:#ebedee;
+    --light-color-2:#f8f9fa;
+    --gray-color:#636a6f;
+    --shdow-color:#a2a2a230;
+    --input-range-color:#eee;
+    --white-background:#fff;
+    --green-color:#00b06e;
+    --black-text:#000;
+    --hover-color:#f2f3f4;
+    --white-text:#fff;
+    --c1: #f42f25;
+    --c2: #f49725;
+    --c3: #255ff4;
+    --c4: #9725f4;
+}
+body{
+    background-color: var(--light-color);
+    font-family: 'Tajawal', sans-serif;
+    user-select: none !important;
+}
+.navbar-qurankareem{
+  background-color: var(--light-color-2);
+}
+.gray-color{
+    color: var(--black-text);
+}
+.navbar-qurankareem{
+    box-shadow: 0px 0px 43px -25px #000;
+    z-index: 3000;
+}
+.search-icon{
+    top: 12px;
+    left: 12px;
+}
+.sheikh-info{
+    transition: 0.3s;
+    height: 171px;
+    overflow: hidden;
+}
+.side_bar{
+    border-radius: 13px;
+    height: fit-content;
+    position: relative;
+    width: 248px;
+    margin-top: 9px;
+}
+.quran-content{
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    gap: 25px;
+    position: relative;
+}
+.audio-player{
+  background:var(--light-color-2);
+  height: auto;
+  z-index: 2000;
+  box-shadow: 0px 17px 90px -29px #000;
+}
+#start,#end{
+  color: var(--black-text);
+}
+.side_bar ul li{
+    cursor: pointer;
+    padding: 10px;
+    border-right: 3px solid var(--hover-color);
+    transition: 0.3s;
+    margin-bottom: 7px;
+    color: var(--black-text);
+}
+.side_bar ul li.active{
+    background-color: var(--light-color);
+    border-right: 3px solid var(--green-color);
+}
+.side_bar ul li:hover{
+    background-color: var(--light-color);
+    border-right: 3px solid var(--green-color);
+}
+.side_bar,.sheikh-info{
+    background-color: var(--light-color-2);
+    box-shadow: 0 2px 8px 0 var(--shdow-color);
+}
+.hadith-owner,.hadith-content,.zekr-container,.zekr{
+  background-color: var(--light-color-2);
+  box-shadow: 0 2px 8px 0 var(--shdow-color);
+  color: var(--black-text);
+}
+.zekr-content h1,p{
+  color: var(--black-text);
+}
+.zekr-container{
+  height: 150px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  cursor: pointer;
+}
+.hadith-owner{
+  cursor: pointer;
+}
+.hadith p{
+  color: var(--black-text);
+}
+.hadith .count{
+  left: 10px;
+  top: 10px;
+  background-color: rgba(0,176,110,.1);
+  color: var(--green-color);
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 36px;
+  font-size: 14px;
+  user-select: none;
+}
+.sheikh-info:hover{
+    /* transform: translateY(-10px); */
+}
+.row{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.sheikh-info a{
+    color: var(--black-text);
+    font-weight: 200;
+    font-size: 23px;
+}
+.sheikh-info .heart{
+    opacity: .5;
+    color: #00000038;
+    cursor: pointer;
+    width: fit-content;
+    margin-left: auto;
+}
+
+.banner{
+    height: 500px;
+    background: url(../images/wp2600721.jpg) #020148 left no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    margin-top: 69px;
+    background-attachment: fixed;
+    transition: 0.4s;
+}
+.search-input{
+  background-color: var(--light-color-2)!important;
+  border: 1px solid var(--light-color-2);
+  color: var(--black-text) !important;
+}
+.banner h1{
+  font-size: 5rem;
+}
+.sheikh-info .count{
+    left: 10px;
+    top: 10px;
+    background-color: rgba(0,176,110,.1);
+    color: var(--green-color);
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 36px;
+    font-size: 14px;
+    user-select: none;
+}
+.menu-icon,.close-side{
+  color: var(--black-text) !important;
+  cursor: pointer;
+}
+.lett{
+  top: 4px;
+}
+.sura{
+  height: fit-content;
+  cursor: default;
+  position: relative;
+}
+.sura > div{
+  position: relative;
+  z-index: 200;
+}
+.sura .hoverd{
+  transition: 0.3s;
+}
+.sura,#fav_empty{
+  color: var(--black-text);
+}
+.sura:after{
+  content: "";
+  position: absolute;
+  background-color: var(--green-color);
+  display: inline-block;
+  width: 0;
+  height: 100%;
+  transition: 0.3s;
+  top: 0;
+  right: 0;
+}
+.sura:hover:after{
+  width: 100%;
+}
+.icons-sura{
+  top: 20px;
+}
+.icons-sura i{
+  cursor: pointer;
+  transform: translate(4px,-1px);
+  opacity: 1 !important;
+}
+.letters{
+  display: flex;
+  flex-direction: row-reverse;
+}
+.sura:hover .sura_btns i{
+  background-color: var(--white-background) !important;
+}
+.sura:hover span{
+  color: var(--white-text) !important;
+}
+ion-icon,i{
+  transition: 0.4s;
+}
+.sura:hover ion-icon{
+  color: var(--white-text) !important;
+}
+
+.small-letter{
+  width: 36px;
+  height: 36px;
+  background: var(--green-color);
+  color: var(--white-text);
+  font-size: 24px;
+  line-height: 34px;
+  user-select: none;
+  margin-left: auto !important;
+}
+.pl1 {
+    justify-content: space-around;}
+  .pl1__a, .pl1__b, .pl1__c{
+    border-radius: 50%;
+    width: 1em;
+    height: 1em;
+    transform-origin: 50% 100%;}
+  
+  .pl1__a, .pl1__b, .pl1__c {
+    animation: bounce1 1s linear infinite;}
+  
+  .loading{
+      z-index: 10000;
+      height: 100vh;
+      display: grid;
+      place-items: center;}
+  .pl1 {
+    display: flex;
+    margin: 1.5em;
+    width: 6em;
+    height: 6em;
+    margin: auto;}
+  .pl1__a {
+    background: var(--c1);}
+  .pl1__b {
+    background: var(--c2);
+    animation-delay: 0.1s;}
+  .pl1__c{
+    background: var(--c3);
+    animation-delay: 0.2s;}
+  
+  
+  /* Animations */
+  @keyframes bounce1 {
+    from, to {
+      transform: translateY(0) scale(1, 1);
+      animation-timing-function: ease-in;}
+    45% {
+      transform: translateY(5em) scale(1, 1);
+      animation-timing-function: linear;}
+    50% {
+      transform: translateY(5em) scale(1.5, 0.5);
+      animation-timing-function: linear;}
+    55% {
+      transform: translateY(5em) scale(1, 1);
+      animation-timing-function: ease-out;}}
+  @keyframes bounce2 {
+    from, to {
+      transform: translateY(0) scale(1, 1);
+      animation-timing-function: ease-in;}
+    9%, 29%, 49%, 69% {
+      transform: translateY(5em) scale(1, 1);
+      animation-timing-function: linear;}
+    10% {
+      transform: translateY(5em) scale(1.5, 0.5);
+      animation-timing-function: linear;}
+    11%, 31%, 51%, 71%, 91% {
+      transform: translateY(5em) scale(1, 1);
+      animation-timing-function: ease-out;}
+    20% {
+      transform: translateY(2.5em) scale(1, 1);
+      animation-timing-function: ease-in;}
+    30% {
+      transform: translateY(5em) scale(1.25, 0.75);
+      animation-timing-function: linear;}
+    40% {
+      transform: translateY(3.75em) scale(1, 1);
+      animation-timing-function: ease-in;}
+    50% {
+      transform: translateY(5em) scale(1.125, 0.875);
+      animation-timing-function: linear;}
+    60% {
+      transform: translateY(4.375em) scale(1, 1);
+      animation-timing-function: ease-in;}
+    70% {
+      transform: translateY(5em) scale(1.0625, 0.9375);
+      animation-timing-function: linear;}
+    85% {
+      transform: translateY(5em) scale(1, 1);
+      animation-timing-function: ease-in;}
+    90% {
+      transform: translateY(5em) scale(1.875, 0.125);
+      animation-timing-function: ease-in-out;}}
+  @keyframes bounce3 {
+    from, 5%, 95%, to {
+      transform: translateY(0) scaleY(1);}
+    16.7% {
+      transform: translateY(0) scaleY(8);}
+    28.3%, 38.3% {
+      transform: translateY(5.25em) scaleY(1);}
+    50% {
+      transform: translateY(2.625em) scaleY(4.5);}
+    61.7%, 71.7% {
+      transform: translateY(2.625em) scaleY(1);}
+    83.3% {
+      transform: translateY(0) scaleY(4.5);}}
+  @keyframes bounce4 {
+    from, 20%, 40%, 60%, 80%, to {
+      transform: scaleY(1);
+      animation-timing-function: ease-out;}
+    10% {
+      transform: scaleY(8);
+      animation-timing-function: ease-in;}
+    30% {
+      transform: scaleY(4);
+      animation-timing-function: ease-in;}
+    50% {
+      transform: scaleY(2);
+      animation-timing-function: ease-in;}
+    70% {
+      transform: scaleY(1.5);
+      animation-timing-function: ease-in;}}
+
+
+input[type='range']{
+  -webkit-appearance: none;
+  width: 100%;
+  background-color: var(--input-range-color);
+  height: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  background: var(--green-color);
+  height:20px;
+  width:20px;
+  border-radius:50%;
+  cursor:pointer;
+  position: relative;
+}
+input[type=range]::-webkit-range-progress {
+  height: 20px;
+  border-radius: 10px 0 0 10px;
+  background-color: #2196F3;
+  border: 2px solid #1976D2;
+} 
+.play-pause div{
+  background-color: var(--green-color);
+  width: 37px;
+  height: 35px;
+  text-align: center;
+  margin: auto;
+  cursor: pointer;
+}
+.play-pause div ion-icon{
+  color: var(--white-text);
+  transform: translate(1px,6px);
+  font-size: 23px;
+}
+
+.toast:not(.showing):not(.show){
+  opacity: 1 !important;
+}
+.notification-container{
+  z-index: 100000000;
+  opacity: 1 !important;
+  bottom: 70px;
+}
+.toast{
+  border-right: 4px solid #00ad6c;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  transition: 0.3s !important;
+}
+.notifyjs-corner{
+  z-index: 10000000 !important;
+  top: unset !important;
+  bottom: 78px !important;
+  left: 0 !important;
+  right: unset !important;
+}
+.notifyjs-corner .notifyjs-wrapper .notifyjs-hidable{
+  margin-bottom: 20px !important;
+}
+@media(max-width:767px){
+  .side_bar{
+    border-radius: 0;
+    position: fixed;
+    margin-top: 0;
+    top: 0;
+    right: -1000px;
+    min-height: 100vh;
+    z-index: 10000;
+    width: 100%;
+    transition: 0.3s;
+  }
+  .side_bar.active{
+    right: 0;
+  }
+  .quran-content{
+    grid-template-columns: 1fr;
+  }
+  .row{
+    flex-direction: unset;
+    --bs-gutter-x:unset !important;
+  }
+  .close-side,.menu-icon{
+    display: block !important;
+  }
+  .banner h1{
+    font-size: 3rem;
+  }
+}
+.navbar-social-links i{
+  width: 40px;
+  height: 40px;
+  font-size: 25px;
+  text-align: center;
+}
+.dark-light-mode{
+  right: 30px;
+  transition: 0.5s;
+  bottom: 90px;
+  cursor: pointer;
+  z-index: 110000;
+  width: 80px;
+  height: 80px;
+  display: grid;
+  place-content: center;
+  box-shadow:0px 0px 47px -6px #000 ;
+  color: #000
+}
+.loading-page{
+  z-index:100000000;
+  height:100vh;
+  background-color: var(--light-color);
+  display: grid;
+}

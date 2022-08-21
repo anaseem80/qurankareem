@@ -1,0 +1,54 @@
+let mode = JSON.parse(localStorage.getItem("mode"))
+if(mode){
+    document.body.style.setProperty('--light-color',mode.lightColor)
+    document.body.style.setProperty('--light-color-2',mode.lightColor2)
+    document.body.style.setProperty('--black-text',mode.blackText)
+    document.body.style.setProperty('--shdow-color',mode.shadowColor);
+    document.body.style.setProperty('--input-range-color',mode.inputRange)
+    if(mode.modeColor=="dark"){
+        $(dark).parent().css("right","-150px")
+        $(light).parent().css("right","30px");
+        $('.banner').css("background-image","url(../images/darken.jpg)")
+    }
+    if(mode.modeColor=="light"){
+        $(light).parent().css("right","-150px")
+        $(dark).parent().css("right","30px")
+        $('.banner').css("background-image","url(../images/wp2600721.jpg)")
+    }
+}
+$(dark).parent().click(function(){
+    document.body.style.setProperty('--light-color',"#121212")
+    document.body.style.setProperty('--light-color-2',"#202020")
+    document.body.style.setProperty('--black-text',"#fff")
+    document.body.style.setProperty('--shdow-color',"none")
+    document.body.style.setProperty('--input-range-color',"#1e1d1d")
+    $('.banner').css("background-image","url(../images/darken.jpg)")
+    $(this).css("right","-150px")
+    $(this).next().css("right","30px");
+    localStorage.setItem("mode",JSON.stringify({
+        "lightColor":"#121212",
+        "lightColor2":"#202020",
+        "blackText":"#fff",
+        "shadowColor":"none",
+        "inputRange":"#1e1d1d",
+        "modeColor":"dark"
+    }))
+})
+$(light).parent().click(function(){
+    document.body.style.setProperty('--light-color',"#ebedee")
+    document.body.style.setProperty('--light-color-2',"#f8f9fa")
+    document.body.style.setProperty('--black-text',"#000")
+    document.body.style.setProperty('--shdow-color',"#a2a2a230")
+    document.body.style.setProperty('--input-range-color',"#eee")
+    $('.banner').css("background-image","url(../images/wp2600721.jpg)")
+    $(this).css("right","-150px")
+    $(this).prev().css("right","30px");
+    localStorage.setItem("mode",JSON.stringify({
+        "lightColor":"#ebedee",
+        "lightColor2":"#f8f9fa",
+        "blackText":"#000",
+        "shadowColor":"a2a2a230",
+        "inputRange":"#eee",
+        "modeColor":"light"
+    }))
+})
